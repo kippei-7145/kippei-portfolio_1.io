@@ -1,0 +1,220 @@
+@charset "utf-8" ;
+/* 共通部分 */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif ;
+  color: #333;
+  background: #ccc;
+}
+.container {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.section-wrapper {
+  padding: 60px 0;
+}
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gray-bg {
+  background-color: #f2f2f2;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  opacity: .7s;
+  transition: all .3s;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+.btn {
+  background: #000;
+  width: 160px;
+  line-height: 36px;
+  font-size: 1.2rem;
+  display: block;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+.section-ttl {
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+}
+.section-description {
+  line-height: 2;
+  font-weight: normal;
+}
+/* headerエリア */
+.header-logo {
+  width: 260px;
+  position: fixed;
+  top: 30px;
+  left: 4vw;
+  z-index: 1;
+}
+.header-nav {
+  font-weight: bold;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 36.1vw;
+  text-align: center;
+  padding: 120px 0 0;
+  background-color: rgba(34, 34, 34, 95);
+  z-index: 2;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform .3s,opacity .3s;
+}
+.nav-item {
+  margin-bottom: 30px;
+}
+.nav-item:first-of-type {
+  margin-bottom: 20px;
+}
+.nav-item:last-of-type {
+  margin-bottom: 20px;
+}
+.header-nav a {
+  color: #fff;
+}
+/* ハンバーガーメニュー */
+.burger-btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 38px;
+  right: 4vw;
+  z-index: 3;
+}
+.bar {
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 22px;
+  border-radius: 1px;
+}
+.bar_top {
+  transform: translateY(-4px);
+  transition: transform .3s;
+}
+.bar_bottom {
+  transform: translateY(4px);
+  transition: transform .3s;
+}
+.menu {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/* ハンバーガーメニューばーが開いた時 */
+.bar.cross.bar_top {
+  transform: translateY(2px)rotate(30deg);
+  transition: transform .3s;
+}
+.bar.cross.bar_mid {
+  opacity: 0;
+  transition: opacity .3s;
+}
+.bar.cross.bar_bottom{
+  transform: translateY(-2px)rotate(-30deg);
+  transition: transform .3s;
+}
+/* ハンバーガーメニューばーが開いた時 */
+.body.noscroll {
+  overflow: hidden;
+}
+.header-nav.open {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform .3s,opacity .3s;
+}
+.burger-musk {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 5);
+}
+.burger-btn.black .bar {
+  background-color: #333;
+  transition: background-color .3s;
+}
+.burger-btn.black .menu {
+  color: #333;
+  transition: color .3s;
+}
+/* ファーストビューエリア */
+.fv {
+  height: 100vh;
+}
+.fv::after {
+  content: "";
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.kv-wrapper {
+  background-image: url(../img/about-fv_pc.jpg);
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 50%;
+  position: relative;
+}
+.copy-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #fff;
+  transform: translate(35%,-50%);
+}
+.main-copy {
+  font-size: 7.2rem;
+  margin-bottom: 10px;
+}
+/* footerエリア */
+footer {
+  height: 50px;
+  width: 100%;
+  background: #333;
+}
+footer p {
+  font-size: 1.2rem;
+  line-height: 50px;
+ color: #fff;
+ text-align: center;
+}
